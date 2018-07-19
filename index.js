@@ -14,7 +14,7 @@ app.use(session( {
     resave: true,
     saveUninitialized: true}));
 
-app.use(express.static('/dist/weatherWebApp'));
+app.use(express.static('dist/weatherWebApp'));
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/dist/weatherWebApp/index.html');
