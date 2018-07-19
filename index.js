@@ -14,10 +14,10 @@ app.use(session( {
     resave: true,
     saveUninitialized: true}));
 
-app.use(express.static('dist'));
+app.use(express.static('/dist/weatherWebApp'));
 
 app.get('/', function(req, res){
-    res.sendfile(__dirname + '/weatherWebApp/index.html');
+    res.sendfile(__dirname + '/dist/weatherWebApp/index.html');
 });
 
 app.get('/location', function (req, res) {
