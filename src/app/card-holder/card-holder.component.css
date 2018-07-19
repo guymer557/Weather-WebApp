@@ -1,0 +1,13 @@
+
+.card{
+  max-width: 20rem;
+  height: 100%;
+  flex: auto;
+}
+
+.card img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

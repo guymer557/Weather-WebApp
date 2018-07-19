@@ -1,0 +1,48 @@
+
+
+.navbar-head{
+  color: ghostwhite;
+  /*font-weight: bold;*/
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.navbar-title{
+  font-size: 1.5rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 750px;
+}
+
+.navbar-item{
+  width: 25%;
+  height: 67%;
+}
+
+#weather-icon{
+  height: 50px;
+  width: 50px;
+  margin-right: 1%;
+}
+
+.item{
+  padding: 2%;
+}
+
+#listing-flex{
+  flex: 2 auto;
+}
+
+#search-flex{
+  height: 35%;
+}
+
+
+
+
+

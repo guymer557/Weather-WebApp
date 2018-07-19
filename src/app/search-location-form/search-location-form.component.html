@@ -1,0 +1,31 @@
+
+<div class="input-forms" id="insert-location-form">
+  <form #inputLocationForm="ngForm" (ngSubmit)="onLocationSubmit(inputLocationForm.value.location)">
+    <div class="input-group mb-3">
+      <input class="form-control" type="text" name="location" placeholder="Enter Location" ngModel>
+      <div class="input-group-append">
+        <button class="btn btn btn-success" type="submit">Find</button>
+      </div>
+    </div>
+  </form>
+
+  <form #chooseLocationForm="ngForm" (ngSubmit)="onChooseSubmit(chooseLocationForm.value.cityIndex)">
+    <div class="input-group">
+      <select class="custom-select" name="cityIndex" [disabled]="!isLocationChosen" ngModel >
+        <option value="" disabled selected>Select City</option>
+        <option *ngFor="let location of locationsList; index as i" [value]="i">
+          {{location}}
+        </option>
+      </select>
+      <div class="input-group-append">
+        <button class="btn btn btn-success" type="submit" [disabled]="!isLocationChosen">Choose</button>
+      </div>
+    </div>
+  </form>
+
+  <div *ngIf="isNoLocationsFound" class="alert alert-info mt-1" role="alert">
+  No locations were found!
+  </div>
+</div>
+
+
