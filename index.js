@@ -7,6 +7,7 @@ var request = require('request');
 var express = require('express');
 var session = require('express-session');
 var app = express();
+const port = process.env.PORT || 8080;
 app.use(session( {
     cookie: {maxAge:30 * 60 * 1000},
     secret: 'keyboard',
@@ -48,7 +49,7 @@ app.get('/city', function (req, res) {
 
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(port);
 
 // Auxiliary functions to handle with the city elements //
 createArrayOfNames = function(array){
