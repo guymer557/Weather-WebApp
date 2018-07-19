@@ -17,7 +17,7 @@ app.use(session( {
 app.use(express.static('/dist/weatherWebApp'));
 
 app.get('/', function(req, res){
-    res.sendfile(__dirname + '/dist/weatherWebApp/index.html');
+    res.sendFile(__dirname + '/dist/weatherWebApp/index.html');
 });
 
 app.get('/location', function (req, res) {
