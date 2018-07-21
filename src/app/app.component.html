@@ -1,10 +1,10 @@
 
 <nav class="shadow navbar-center navbar-head bg-dark">
   <img id="weather-icon" src="/assets/images/weather-icon.png">
-  <span class="navbar-brand navbar-title" >Weather WebApp</span>
+  <span class="navbar-brand navbar-title">{{title}}</span>
 </nav>
 
 <div class="container">
   <app-cards-listing class="item" id="listing-flex"></app-cards-listing>
-  <app-search-location-form class="item" id="search-flex"></app-search-location-form>
+  <app-search-location-form class="item" id="search-flex" (locationChosen)="onLocationChosen($event)"></app-search-location-form>
 </div>

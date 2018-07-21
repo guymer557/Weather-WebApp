@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import {LocationsListService} from '../services/locations-list.service';
@@ -12,9 +12,10 @@ export class SearchLocationFormComponent implements OnInit {
 
   @ViewChild('inputLocationForm') inputLocationForm: NgForm;
   @ViewChild('chooseLocationForm') chooseLocationForm: NgForm;
+  @Output() locationChosen = new EventEmitter<object>();
   locationsList: Array<string>;
   isLocationChosen: boolean = false;
-  isNoLocationsFound: boolean = false;
+  isNoLocationsFound: boolean;
 
 
   constructor(private locationListService: LocationsListService) { }
@@ -36,11 +37,13 @@ export class SearchLocationFormComponent implements OnInit {
     );
   }
 
-  onChooseSubmit(cityIndex): void {
-    this.locationListService.getCityWeatherInfo(cityIndex);
+  onChooseSubmit(city): void {
+    this.locationChosen.emit(city);
     this.inputLocationForm.reset();
     this.chooseLocationForm.reset();
     this.isLocationChosen = false;
   }
+
+
 
 }

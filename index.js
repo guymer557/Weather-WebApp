@@ -1,13 +1,14 @@
 
-var baseUrl = "https://www.timeanddate.com";
-var cityNameSelector = "a";
+const baseUrl = "https://www.timeanddate.com";
+const cityNameSelector = "a";
+const port = process.env.PORT || 8080;
 
 var cheerio = require('cheerio');
 var request = require('request');
 var express = require('express');
 var session = require('express-session');
 var app = express();
-const port = process.env.PORT || 8080;
+
 app.use(session( {
     cookie: {maxAge:30 * 60 * 1000},
     secret: 'keyboard',

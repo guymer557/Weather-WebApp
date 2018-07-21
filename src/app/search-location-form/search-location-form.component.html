@@ -9,11 +9,11 @@
     </div>
   </form>
 
-  <form #chooseLocationForm="ngForm" (ngSubmit)="onChooseSubmit(chooseLocationForm.value.cityIndex)">
+  <form #chooseLocationForm="ngForm" (ngSubmit)="onChooseSubmit(chooseLocationForm.value.cityValue)">
     <div class="input-group">
-      <select class="custom-select" name="cityIndex" [disabled]="!isLocationChosen" ngModel >
+      <select class="custom-select" name="cityValue" [disabled]="!isLocationChosen" ngModel >
         <option value="" disabled selected>Select City</option>
-        <option *ngFor="let location of locationsList; index as i" [value]="i">
+        <option *ngFor="let location of locationsList; index as i" [ngValue]="{'index': i, 'name': location}">
           {{location}}
         </option>
       </select>

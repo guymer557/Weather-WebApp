@@ -29,4 +29,14 @@ export class CardsListingComponent implements OnInit {
     this.cards.push(data);
   }
 
+  isLocationExist(locationName): boolean {
+    for (let i = 0; i < this.cards.length; i++) {
+      if (this.cards[i].header === locationName) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
 }
