@@ -1,6 +1,6 @@
 # Weather WebApp
 
-This is a crawler weather web-app that generates a weather information about a specific location by user choice.
+This is a weather web-app crawler that generates a weather information about a specific location by user choice.
 All the information is taken from the site https://www.timeanddate.com.
 
 ## Getting Started
