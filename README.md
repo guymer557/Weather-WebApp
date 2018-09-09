@@ -19,4 +19,8 @@ These instructions will get you a copy of the project up and running on your loc
 1. Run `ng build` to create the `dist` folder.
 2. Run node index.js to run the server of the app.
 
+<<<<<<< HEAD
 After those steps, you should be able to access locally to the app through `localhost:8080`
+=======
+After these steps, you should be able to access locally to the app through `localhost:8080`
+>>>>>>> 506c3c633f70654026761feb3c5a3074a94dd3d7
