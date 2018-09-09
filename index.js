@@ -30,7 +30,7 @@ app.get('/location', function (req, res) {
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         req.session.cities = createArrayOfLinks(arrayOfCities);
         res.send(createArrayOfNames(arrayOfCities));
-        
+        //
     });
 });
 
