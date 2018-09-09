@@ -25,7 +25,7 @@ app.get('/location', function (req, res) {
     var cityName = req.param("location");
     request(baseUrl + "/weather/?query=" + cityName, function (error, response, body) {
         var $ = cheerio.load(body);
-        var arrayOfCities = $('table[class="zebra fw tb-wt va-m"] tbody>tr a');
+        var arrayOfCities = $('table[class="zebra fw tb-theme"] tbody>tr a');
         // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         req.session.cities = createArrayOfLinks(arrayOfCities);
