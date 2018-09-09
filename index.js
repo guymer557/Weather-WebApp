@@ -52,7 +52,7 @@ app.get('/city', function (req, res) {
 
 app.listen(port);
 
-// Auxiliary functions to handle with the city elements //
+// Auxiliary functions to handle with the city elements  //
 createArrayOfNames = function(array){
     var resArray = [];
     var $;
